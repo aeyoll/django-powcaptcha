@@ -1,0 +1,9 @@
+<input type="hidden" name="challenge" value="{{ captcha_challenge }}" />
+<input type="hidden" name="nonce" />
+
+<div
+    class="captcha-container"
+    data-sqr-captcha-url="{{ captcha_url }}"
+    data-sqr-captcha-challenge="{{ captcha_challenge }}"
+    data-sqr-captcha-callback="myCaptchaCallback">
+</div>
