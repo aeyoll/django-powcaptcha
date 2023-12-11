@@ -14,7 +14,7 @@ def powcaptcha_request(path, params):
     token = getattr(settings, 'POWCAPTCHA_API_TOKEN')
 
     request_object = Request(
-        url=f'https://{domain}/{path}',
+        url=f'{domain}/{path}',
         data=params,
         headers={
             'Authorization': f'Bearer {token}',
