@@ -27,15 +27,14 @@ POWCAPTCHA_API_KEY = 'MyPOWCAPTCHAPrivateKey456'
 
 ## Usage
 
-### Fields
+### Form
 
 The quickest way to add PowCaptcha to a form is to use the included
-`PowCaptchaField` field class. For example:
+`PowCaptchaForm` class. For example:
 
 ```python
-from django import forms
-from django_powcaptcha.fields import PowCaptchaField
+from django_powcaptcha.forms import PowCaptchaForm
 
-class FormWithCaptcha(forms.Form):
-    captcha = PowCaptchaField()
+class FormWithCaptcha(PowCaptchaForm):
+    ...
 ```
