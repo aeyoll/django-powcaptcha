@@ -4,7 +4,7 @@ from django.core.exceptions import ImproperlyConfigured
 
 SETTINGS_TYPES = {
     'POWCAPTCHA_API_URL': str,
-    'POWCAPTCHA_API_KEY': str,
+    'POWCAPTCHA_API_TOKEN': str,
 }
 
 # Validate settings types.

@@ -22,7 +22,7 @@ For example:
 
 ```python
 POWCAPTCHA_API_URL = 'https://captcha.yourdomain.com'
-POWCAPTCHA_API_KEY = 'MyPOWCAPTCHAPrivateKey456'
+POWCAPTCHA_API_TOKEN = 'MyPOWCAPTCHAPrivateKey456'
 ```
 
 ## Usage
