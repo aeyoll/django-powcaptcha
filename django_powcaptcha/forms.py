@@ -1,4 +1,4 @@
-from django.forms import forms
+from django import forms
 
 from django_powcaptcha.client import validate_captcha, PowCaptchaValidationException
 from django_powcaptcha.fields import PowCaptchaChallengeField
