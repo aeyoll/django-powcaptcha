@@ -6,7 +6,7 @@ from django_powcaptcha.client import get_challenge
 
 class PowCaptchaChallengeWidget(widgets.Widget):
     input_type = 'hidden'
-    template_name = 'django_recaptcha/widget.html'
+    template_name = 'django_powcaptcha/widget.html'
 
     def get_context(self, name, value, attrs):
         context = super().get_context(name, value, attrs)
