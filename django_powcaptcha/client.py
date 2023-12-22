@@ -1,3 +1,4 @@
+from django.core.cache import cache
 import json
 from urllib.error import HTTPError
 from urllib.request import Request, build_opener
@@ -31,13 +32,18 @@ def powcaptcha_request(path, params):
 
 
 def get_challenge():
-    path = 'GetChallenges?difficultyLevel=5'
-    response = powcaptcha_request(path, [])
-    challenges = json.loads(response.read().decode('utf-8'))
+    challenges = cache.get('powcaptcha_challenges')
 
-    # @Todo: implement caching
+    if not challenges or len(challenges) == 0:
+        path = 'GetChallenges?difficultyLevel=5'
+        response = powcaptcha_request(path, [])
+        challenges = json.loads(response.read().decode('utf-8'))
 
-    return challenges[0]
+    challenge = challenges[0]
+    challenges.pop(0)
+    cache.set('powcaptcha_challenges', challenges, 3600)
+
+    return challenge
 
 
 def validate_captcha(challenge: str, nonce: str):
