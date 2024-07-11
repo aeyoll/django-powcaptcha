@@ -4,7 +4,7 @@ long_desc = open("README.md").read()
 
 setup(
     name="django-powcaptcha",
-    version="0.0.2",
+    version="0.0.3",
     description="Django PowCaptcha form field/widget app.",
     long_description=long_desc,
     long_description_content_type="text/markdown",
