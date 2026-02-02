@@ -1,9 +1,9 @@
-from django.core.cache import cache
 import json
 from urllib.error import HTTPError
 from urllib.request import Request, build_opener
 
 from django.conf import settings
+from django.core.cache import cache
 
 
 class PowCaptchaValidationException(Exception):
@@ -25,10 +25,7 @@ def powcaptcha_request(path, params):
     opener_args = []
     opener = build_opener(*opener_args)
 
-    return opener.open(
-        request_object,
-        timeout=5
-    )
+    return opener.open(request_object, timeout=5)
 
 
 def get_challenge():
