@@ -53,3 +53,12 @@ include = ["django_powcaptcha*"]
 
 [tool.setuptools.package-data]
 django_powcaptcha = ["templates/**/*"]
+
+[bumpver]
+current_version = "0.0.5"
+version_pattern = "MAJOR.MINOR.PATCH"
+
+[bumpver.file_patterns]
+"pyproject.toml" = [
+  "version = \"{version}\"$",
+]
