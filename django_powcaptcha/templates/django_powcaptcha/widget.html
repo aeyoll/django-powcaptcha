@@ -7,8 +7,8 @@
     data-sqr-captcha-callback="myCaptchaCallback">
 </div>
 
-<script src="{{ captcha_url }}/static/captcha.js"></script>
-<script>
+<script async defer src="{{ captcha_url }}/static/captcha.js"></script>
+<script async defer>
 document.addEventListener('DOMContentLoaded', function() {
     if (typeof window.myCaptchaCallback === 'function') {
         return;
