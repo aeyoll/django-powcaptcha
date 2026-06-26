@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "django-powcaptcha"
-version = "0.0.5"
+version = "0.0.6"
 description = "Django PowCaptcha form field/widget app."
 readme = "README.md"
 authors = [
@@ -55,7 +55,7 @@ include = ["django_powcaptcha*"]
 django_powcaptcha = ["templates/**/*"]
 
 [bumpver]
-current_version = "0.0.5"
+current_version = "0.0.6"
 version_pattern = "MAJOR.MINOR.PATCH"
 
 [bumpver.file_patterns]
